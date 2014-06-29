@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+
+    <!-- En la directiva ng-app declaramos el nombre de esta vista -->
+    <body id="main" ng-app="primerosPasos">
+
+    <!-- 1. Primeros pasos -->    
+
+         <!-- Ejemplo de renderización de plantillas, primero con el sistema
+         de llaves y por último con la directiva ng-bind.
+         Obsérvese la directiva ng-cloack para ocultar las llaves antes de que
+         angular renderice las plantillas -->
+        <header ng-cloack ng-controller='cHeader'>
+            <h1 > {{ titular }} </h1>
+            <p> {{ textoPresentacion }} </p>
+            <p ng-bind='textoBind'></p>
+        </header>
+
+        <!-- Ejemplo de la directiva ng-repeat -->
+        <article ng-controller='cEnlacesMain'>
+            <ul>
+                <!-- Obsérvese la almohadilla en el enlace -->
+                <li ng-repeat='enlace in enlaces' ng-cloack>
+                    <a href="#{{ enlace.key }}"> {{ enlace.value}} </a>
+                </li>
+            </ul>
+        </article>
+
+         <!-- Ejemplo de eventos -->
+        <article ng-controller='pruebaEventos'>
+            <p ng-click="miFuncion()">Pulsar</p>
+        </article>
+
+    <!-- 2. Primera y segunda práctica -->
+
+        <!-- Aquí es donde se muestran las vistas ruteadas -->
+        <article ng-view></article>
+             
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/angular-route.min.js"></script>        
+
+        <script src="js/app.js"></script>
+        <script src="js/controllers-primeros-pasos.js"></script>
+     
+
+    </body>
+</html>

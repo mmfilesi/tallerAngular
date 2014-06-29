@@ -1,0 +1,20 @@
+<section ng-controller="cInputDinamicos" ng-cloack>
+
+	<h3>{{ titular }}</h3>
+
+	<div ng-cloack>
+		<p>{{ subtitular }}</p>
+		<ul ng-repeat="libro in librosBiblioteca">
+			<li >{{ libro.autor }}: {{ libro.libro }}</li>
+		</ul>
+		Total: {{librosBiblioteca.length}}
+	</div>
+
+	<div>
+		<p>Indexar nuevo libro</p>
+		<form ng-submit="addLibro()">
+			<input type="text" placeholder="Autor" ng-model="inputAutor"> || <input type="text" placeholder="Libro" ng-model="inputLibro">
+		<p>	<input type="submit" value="Enviar"></p>
+		</form>
+	</div>
+</section>
