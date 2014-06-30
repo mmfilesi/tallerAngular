@@ -9,8 +9,7 @@ testApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/index', {
-        templateUrl: 'js/templates/main.html',
-        controller: 'dataList'
+        templateUrl: 'js/templates/main.html'
    
       }).
       when('/index/page1', {
@@ -20,12 +19,12 @@ testApp.config(['$routeProvider',
       }).
       when('/index/page2', {
         templateUrl: 'js/templates/search2.html',
-        controller: 'dataList'
+        controller: 'dataListSearch2'
    
       }).
       when('/index/page3', {
         templateUrl: 'js/templates/search3.html',
-        controller: 'dataList'
+        controller: 'dataListSearch3'
    
       }).
      /* when('/phones/:phoneId', {
