@@ -1,0 +1,34 @@
+<div class="modal-bg" ng-if="DisplayUpdate === 'none'">
+	<section id="pop" class="box-60 border-2-grey center-60 middle-60 absolute cust-popup text-center ">
+		<a ng-click="closeModal()" class="cust-close">X</a>
+		<form name="addData"></form>
+		<p>Nombre: <input ng-model="data.name"/></p>
+		<p>Descripción: <textarea ng-model="data.description"></textarea></p>
+		<p><button ng-click="closeModal()" class="cust-button">Cancelar</button> - <button ng-click="createData()" class="cust-button">Agregar</button></p>
+	</section>
+</div>
+<script type="text/javascript">alert(2);</script>
+<section  class="box-60 border-2-grey center-60 relative text-center">
+	<p>Ejemplo de filtro de datos con Angular: (medio usando la funcion watch del scope de angular y cambiando los indices de las búsquedas) </p>
+	<p>Tipo de busqueda: 
+		<select ng-model="typeSearch" ng-change="clear()" ng-valid>
+			<option  value="all" selected>Todos</option>
+			<option  value="name">Nombre</option>
+			<option  value="description">Descripción</option>
+		</select>
+	</p>
+	<p>Buscar: <input id="query2" ng-model="query2"></p>
+
+</section>
+
+
+<section class="box-60 border-2-grey center-60 relative text-center">
+	<p>Ejemplo de impresión de datos con Angular: </p>
+	
+	<li ng-repeat="dato in datos | filter:basic ">
+  		<p>{{dato.name}}</p>
+  		{{dato.description}}
+ 	</li>
+ 	[<a ng-click="openModal()">Añadir</a>]
+</section>
+
