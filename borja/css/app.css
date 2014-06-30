@@ -1,0 +1,79 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana;
+}
+p{
+	line-height: 25px;
+}
+body,.ng-scope{
+	overflow: hidden;
+}
+.scroller-y{
+	overflow-y: auto;
+	overflow-x:hidden;
+}
+.height-100{
+	height: 100%;
+}
+.box-60{
+	padding: 10px;
+	width: 60%;
+}
+.border-2-grey{
+	border: 0.8em solid #cecece;
+}
+.absolute{
+	position: absolute;
+}
+.relative{
+	position: relative;
+}
+.disp-none{
+	display: none;
+}
+.text-center{
+	text-align: center;
+}
+.center-60{
+	left: 50%;
+	margin-left: -30%;
+}
+.middle-60{
+	top: 35%;
+}
+.modal-bg{
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	bottom: 0px;
+	position: absolute;
+	z-index: 3;
+}
+/*Customs css*/
+.cust-popup{
+	background: #fff;
+	z-index: 4;
+}
+.cust-button{
+	border: none;
+	background: #ececec;
+	padding:10px 15px;
+}
+
+.cust-close{
+	border-radius: 15px;
+	height: 20px;
+	width: 20px;
+	border: 4px solid #ffffff;
+	line-height: 19px;
+	position: absolute;
+	border-top-right-radius: 1px;
+	display: block;
+	right: -17px;
+	top: -17px;
+	background: #cecece;
+	font-weight: bold;
+
+}
